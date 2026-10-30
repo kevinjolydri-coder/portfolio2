@@ -1,11 +1,14 @@
-/* 1. Réinitialisation de base */
+
+/* ==============================
+   1. BASE GÉNÉRALE
+============================== */
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-/* 2. Style général de la page */
 body {
   font-family: Arial, sans-serif;
   background-color: #1e3a8a;
@@ -13,153 +16,123 @@ body {
   line-height: 1.6;
 }
 
-/* 3. En-tête */
-.header {
+/* ==============================
+   2. EN-TÊTE ET NAVIGATION
+============================== */
+
+header {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  flex-wrap: wrap;
+  gap: 20px;
   padding: 24px 8%;
   background-color: #111c32;
-  border-bottom: 1px solid #26344d;
 }
 
-/* 4. Logo */
-.logo {
+header h1 {
   color: #38bdf8;
-  font-size: 24px;
-  font-weight: bold;
-  text-decoration: none;
 }
 
-/* 5. Menu de navigation */
-.menu {
+nav ul {
   display: flex;
+  flex-wrap: wrap;
   gap: 24px;
   list-style: none;
 }
 
-.menu a {
+nav a {
   color: #cbd5e1;
   text-decoration: none;
   transition: color 0.3s ease;
 }
 
-/* Couleur au survol */
-.menu a:hover {
+nav a:hover {
   color: #38bdf8;
 }
 
-/* 6. Section d'accueil */
+/* ==============================
+   3. PAGE D'ACCUEIL
+============================== */
+
 .hero {
-  min-height: 75vh;
+  min-height: 60vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
-  text-align: center;
-  padding: 60px 8%;
+  align-items: flex-start;
+  padding: 80px 8%;
+  background-color: #0f172a;
+  color: white;
+  border-radius: 16px;
 }
 
-/* Petit texte au-dessus du titre */
+.hero h1 {
+  font-size: 52px;
+  font-weight: 800;
+  line-height: 1.2;
+  max-width: 800px;
+}
+
+.hero h1 span,
+section h2 {
+  color: #009fe3;
+}
+
 .surtitre {
-  color: #38bdf8;
+  color: #009fe3;
   font-size: 14px;
+  font-weight: bold;
   letter-spacing: 3px;
   margin-bottom: 20px;
 }
 
-/* Titre principal */
-.hero h1 {
-    font-size: 52px;
-    font-weight: 800;
-    line-height: 1.2;
-    max-width: 800px;
-}
-/* Texte d'introduction */
 .introduction {
   max-width: 650px;
   color: #cbd5e1;
   font-size: 18px;
-  margin-bottom: 32px;
+  margin-bottom: 30px;
 }
 
-/* 7. Bouton vers les projets */
 .bouton {
   display: inline-block;
-  background-color: #0284c7;
+  background-color: #009fe3;
   color: white;
-  padding: 14px 26px;
+  padding: 14px 28px;
   border-radius: 8px;
   text-decoration: none;
   font-weight: bold;
-  transition: background-color 0.3s ease;
+  transition: 0.3s ease;
 }
 
-.hero .bouton:hover {
-    background-color: #007DB5;
-    transform: translateY(-3px);
-}
-/* 8. Pied de page */
-.footer {
-  text-align: center;
-  padding: 24px;
-  color: #94a3b8;
-  border-top: 1px solid #26344d;
+.bouton:hover {
+  background-color: #007db5;
+  transform: translateY(-3px);
 }
 
-/* 9. Adaptation aux petits écrans */
-@media (max-width: 768px) {
-  .header {
-    flex-direction: column;
-    gap: 20px;
-    padding: 24px;
-  }
+/* ==============================
+   4. SECTIONS
+============================== */
 
-  .liste-projets {
-    grid-template-columns: 1fr;
-  }
-}
-  .menu {
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 16px;
-  }
-
-  .hero h1 {
-    font-size: 34px;
-  }
-
-  .introduction {
-    font-size: 16px;
-  }
+section {
+  margin-bottom: 30px;
+  padding: 30px;
+  border-radius: 10px;
+  background-color: #1e293b;
 }
 
-/* Carte de projet */
-.carte-projet {
-  background-color: #111c32;
-  padding: 24px;
-  border-radius: 12px;
-  margin: 30px 0;
-}
-
-.carte-projet {
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.carte-projet:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
-}
-
-.carte-projet img {
-  width: 100%;
-  height: 200px;
-  object-fit: cover;
-  border-radius: 8px;
+section h2 {
   margin-bottom: 15px;
 }
 
-/* Page des projets */
+section li {
+  color: #e2e8f0;
+  margin-bottom: 10px;
+}
+
+/* ==============================
+   5. PAGE PROJETS
+============================== */
 
 .projets-intro {
   text-align: center;
@@ -167,169 +140,155 @@ body {
 }
 
 .liste-projets {
-  padding: 20px;
+  padding: 30px;
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 20px;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 30px;
 }
+
 .titre-realisations {
   grid-column: 1 / -1;
 }
 
 .carte-projet {
-  background-color: #ffffff;
+  background-color: white;
   color: #1e293b;
-  padding: 25px;
-  margin: 20px 0;
+  padding: 22px;
+  margin: 0;
   border-radius: 12px;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-/* Page compétences */
-/* Page compétences */
-section {
-    margin-bottom: 30px;
-    padding: 20px;
-    border-radius: 10px;
-    background-color: #1e293b;
+.carte-projet:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
 }
-section h2 {
-    color: #009fe3;
-    margin-bottom: 15px;
+
+.carte-projet img {
+  display: block;
+  width: 100%;
+  height: 220px;
+  object-fit: contain;
+  background-color: #f1f5f9;
+  border-radius: 8px;
+  margin-bottom: 18px;
 }
-section li {
-    color: #e2e8f0;
-    margin-bottom: 10px;
-    line-height: 1.6;
+
+.carte-projet h3 {
+  margin-bottom: 8px;
 }
+
+.carte-projet p {
+  margin-bottom: 15px;
+}
+
+.carte-projet a {
+  display: inline-block;
+  color: #007db5;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.carte-projet a:hover {
+  text-decoration: underline;
+}
+
+/* ==============================
+   6. PAGE COMPÉTENCES
+============================== */
+
 .debutant {
-    font-style: italic;
+  font-style: italic;
 }
-.hero h1 span {
-    color: #009FE3;
-}
-@media (max-width: 600px) {
-    .hero h1 {
-        font-size: 36px;
-    }
 
-    .hero {
-        padding: 70px 24px;
-        min-height: auto;
-        border-radius: 12px;
-    }
+.cartes-univers {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
 
-    .hero .introduction {
-        font-size: 16px;
-    }
-        .cartes-univers {
-        grid-template-columns: 1fr;
-        gap: 20px;
-    }
-        .univers {
-        padding: 24px;
-        margin-top: 35px;
-    }
-
-    .univers h2 {
-        font-size: 26px;
-    }
-}
-.hero .introduction {
-    max-width: 650px;
-    font-size: 18px;
-    line-height: 1.8;
-    color: #4B5563;
-    margin-bottom: 30px;
-}
-.hero .bouton {
-    display: inline-block;
-    background-color: #009FE3;
-    color: #FFFFFF;
-    padding: 14px 28px;
-    border-radius: 8px;
-    text-decoration: none;
-    font-weight: 700;
-    transition: background-color 0.3s ease, transform 0.3s ease;
-}
-.hero {
-    padding: 100px 8%;
-    min-height: 60vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: flex-start;
-    background-color: #0F172A;
-color: #FFFFFF;
-border-radius: 16px;
-}
-.hero .surtitre {
-    color: #009FE3;
-    font-size: 14px;
-    font-weight: 700;
-    letter-spacing: 3px;
-    text-transform: uppercase;
-    margin-bottom: 20px;
-}
-.hero .signature {
-    color: #009FE3;
-    font-size: 15px;
-    font-style: italic;
-    margin-top: 0;
-    margin-bottom: 30px;
-}
 .univers {
-    margin-top: 60px;
-    padding: 40px;
+  margin-top: 60px;
+  padding: 40px;
 }
+
+.univers h2 {
+  color: #0f172a;
+  font-size: 32px;
+  margin-bottom: 15px;
+}
+
+.univers > p {
+  color: #64748b;
+  margin-bottom: 30px;
+}
+
 .carte-univers {
-    padding: 30px;
-    margin-top: 25px;
+  background-color: white;
+  color: #1e293b;
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+  padding: 30px;
+  transition: 0.3s ease;
 }
+
 .carte-univers:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.10);
-    border-color: #009FE3;
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  border-color: #009fe3;
 }
 
 .carte-univers h3 {
-    margin-bottom: 15px;
-    color: #0F172A;
-}
-.carte-univers p {
-    line-height: 1.7;
-    color: #475569;
-}
-.cartes-univers {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 24px;
-}
-.carte-univers {
-    background-color: #FFFFFF;
-    border: 1px solid #E5E7EB;
-    border-radius: 12px;
-    padding: 30px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-.univers h2 {
-    color: #0F172A;
-    font-size: 32px;
-    margin-bottom: 15px;
+  margin-bottom: 15px;
+  color: #0f172a;
 }
 
-.univers h2::after {
-    content: "";
-    display: block;
-    width: 60px;
-    height: 4px;
-    background-color: #009FE3;
-    margin-top: 12px;
-    border-radius: 2px;
+.carte-univers p {
+  line-height: 1.7;
+  color: #475569;
 }
-.univers > p {
-    color: #64748B;
-    font-size: 16px;
-    line-height: 1.7;
-    margin-bottom: 30px;
+
+/* ==============================
+   7. PIED DE PAGE
+============================== */
+
+footer {
+  text-align: center;
+  padding: 24px;
+  color: #94a3b8;
+}
+
+/* ==============================
+   8. ADAPTATION MOBILE
+============================== */
+
+@media (max-width: 768px) {
+
+  header {
+    flex-direction: column;
+    padding: 24px;
+  }
+
+  nav ul {
+    justify-content: center;
+    gap: 16px;
+  }
+
+  .hero {
+    padding: 60px 24px;
+    min-height: auto;
+  }
+
+  .hero h1 {
+    font-size: 36px;
+  }
+
+  .liste-projets {
+    grid-template-columns: 1fr;
+  }
+
+  .cartes-univers {
+    grid-template-columns: 1fr;
+  }
 }
