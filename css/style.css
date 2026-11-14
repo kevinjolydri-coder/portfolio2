@@ -292,3 +292,78 @@ footer {
     grid-template-columns: 1fr;
   }
 }
+
+.liste-competences {
+    list-style: none; /* Retire les points noirs devant les icônes */
+    padding-left: 0;
+}
+
+.liste-competences li {
+    display: flex;          /* Place l'image et le texte côte à côte */
+    align-items: center;    /* Aligne l'icône et le texte bien au milieu sur la même ligne */
+    gap: 10px;              /* Ajoute un petit espace propre de 10px entre l'icône et le nom */
+    margin-bottom: 10px;    /* Espace chaque ligne de logiciel */
+}
+
+.btn-competences {
+    display: inline-block;          /* Permet de donner des marges intérieures (padding) au lien */
+    background-color: #ffffff;      /* Fond blanc bien visible */
+    color: #1a2433;                 /* Texte bleu très foncé assorti à ton fond */
+    border: 2px solid #00a8ff;      /* Encadrement bleu vif assorti à ton titre h2 */
+    padding: 10px 18px;             /* Espace intérieur pour créer l'effet bouton */
+    border-radius: 6px;             /* Coins légèrement arrondis */
+    text-decoration: none;          /* Retire le soulignement */
+    font-weight: bold;              /* Texte en gras */
+    margin-top: 8px;                /* Petit espace au-dessus du bouton */
+    transition: 0.3s;               /* Animation douce au survol de la souris */
+}
+
+/* Effet quand on passe la souris sur le bouton */
+.btn-competences:hover {
+    background-color: #00a8ff;      /* Le fond devient bleu vif */
+    color: #ffffff;                 /* Le texte devient blanc */
+}
+
+.lien-contact {
+    color: #00a8ff;
+    text-decoration: none;
+}
+
+.lien-contact:hover {
+    text-decoration: underline;
+}
+
+.form-contact {
+    max-width: 500px;
+    margin-top: 15px;
+}
+
+.champ {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 15px;
+}
+
+.champ label {
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.champ input,
+.champ textarea {
+    padding: 10px;
+    border: 2px solid #00a8ff;
+    border-radius: 6px;
+    font-family: inherit;
+    font-size: 1rem;
+}
+
+/* Titre "Entre technologie et créativité" en blanc */
+.univers h2 {
+    color: #ffffff;
+}
+
+/* Sous-titre "Trois domaines..." en gris clair */
+.univers > p {
+    color: #cbd5e1;
+}

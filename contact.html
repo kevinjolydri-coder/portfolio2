@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact | Kevin Joly</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <header>
+        <h1>Me contacter</h1>
+     <nav>
+            <ul>
+                <li><a href="index.html">Accueil</a></li>
+                <li><a href="CV.html">CV</a></li>
+                <li><a href="projet.html">Projet</a></li>
+                <li><a href="competence.html">Mes compétences</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="https://www.univ-littoral.fr/" target="_blank">Ulco</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <!-- BLOC 1 : Tes coordonnées directes -->
+        <section id="coordonnees">
+            <h2>Mes coordonnées</h2>
+            <p>N'hésitez pas à me contacter pour toute proposition de stage, d'alternance ou de projet numérique :</p>
+            <ul>
+                <li><strong>Localisation :</strong> Calais (62100)</li>
+                <li><strong>Téléphone :</strong> <a href="tel:+33783411563" class="lien-contact">07.83.41.15.63</a></li>
+                <li><strong>Email :</strong> <a href="mailto:kevinjoly.dri@gmail.com" class="lien-contact">kevinjoly.dri@gmail.com</a></li>
+                <li><strong>LinkedIn :</strong> Joly Kevin</li>
+            </ul>
+        </section>
+        <!-- BLOC 2 : Formulaire de contact -->
+        <section id="formulaire-contact">
+            <h2>Envoyer un message</h2>
+            <form action="mailto:kevinjoly.dri@gmail.com" method="post" enctype="text/plain" class="form-contact">
+                <div class="champ">
+                    <label for="nom">Votre nom :</label>
+                    <input type="text" id="nom" name="nom" placeholder="Ex : Jean Dupont" required>
+                </div>
+
+                <div class="champ">
+                    <label for="email">Votre email :</label>
+                    <input type="email" id="email" name="email" placeholder="Ex : jean.dupont@email.com" required>
+                </div>
+
+                <div class="champ">
+                    <label for="sujet">Sujet :</label>
+                    <input type="text" id="sujet" name="sujet" placeholder="Proposition de stage / Projet web" required>
+                </div>
+
+                <div class="champ">
+                    <label for="message">Votre message :</label>
+                    <textarea id="message" name="message" rows="5" placeholder="Écrivez votre message ici..." required></textarea>
+                </div>
+
+                <button type="submit" class="btn-competences">Envoyer le message</button>
+            </form>
+        </section>
+    </main>
+
+   <footer>
+        <p>&copy; 2026 - Kevin Joly | Calais (62100)</p>
+    </footer>
+</body>
+
+</html>
