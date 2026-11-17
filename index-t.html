@@ -4,23 +4,23 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mon portfolio | Webmaster</title>
-    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="stylesheet" href="dist/output.css">
 </head>
 
 <body class="bg-slate-50 text-slate-800 font-sans">
 
     <!-- HEADER : Flexbox pour aligner le titre à gauche et le menu à droite -->
     <header class="bg-white shadow-sm px-8 py-4 flex flex-col md:flex-row justify-between items-center">
-        <h1 class="text-xl font-bold text-slate-900">Mon portfolio</h1>
+        <h1 class="font-titre text-marque text-2xl font-bold">Mon site</h1
         <nav>
             <ul class="flex flex-wrap gap-6 mt-3 md:mt-0 text-sm font-medium text-slate-600">
-                <li><a href="index.html" class="bouton inline-block bg-blue-600 text-white font-semibold px-6 py-3 rounded-lg hover:bg-blue-700 transition">Accueil</a></li>
-                <li><a href="CV.html" class="bouton inline-block bg-blue-600 text-white font-semibold px-6 py-3 rounded-lg hover:bg-blue-700 transition">CV</a></li>
-                <li><a href="projet.html" class="bouton inline-block bg-blue-600 text-white font-semibold px-6 py-3 rounded-lg hover:bg-blue-700 transition">Projet</a></li>
-                <li><a href="competence.html" class="bouton inline-block bg-blue-600 text-white font-semibold px-6 py-3 rounded-lg hover:bg-blue-700 transition">Mes compétences</a></li>
-                <li><a href="contact.html" class="bouton inline-block bg-blue-600 text-white font-semibold px-6 py-3 rounded-lg hover:bg-blue-700 transition">Contact</a></li>
+                <li><a href="index.html" <button class="btn">Accueil</a></li>
+                <li><a href="CV.html" <button class="btn">CV</a></li>
+                <li><a href="projet.html" <button class="btn">Projet</a></li>
+                <li><a href="competence.html" <button class="btn">Mes compétences</a></li>
+                <li><a href="contact.html" <button class="btn">Contact</a></li>
                 <!-- Exemple d'utilisation de rounded-full pour un bouton pilule -->
-                <li><a href="https://www.univ-littoral.fr/" class="bouton inline-block bg-blue-600 text-white font-semibold px-6 py-3 rounded-lg hover:bg-blue-700 transition">Ulco</a></li>
+                <li><a href="https://www.univ-littoral.fr/" <button class="btn">Ulco</a></li>
             </ul>
         </nav>
     </header>
@@ -45,10 +45,11 @@
                 Un parcours atypique, une passion pour le numérique et l'envie de créer.
             </p>
             <!-- BOUTON : rounded-lg pour arrondir les 4 coins -->
-            <a href="projet.html" class="bouton inline-block bg-blue-600 text-white font-semibold px-6 py-3 rounded-lg hover:bg-blue-700 transition ">
-               devouvrez mes projets
-               <a href="competence.html" class="bouton inline-block bg-green-500 text-white font-semibold px-6 py-3 rounded-lg hover:bg-blue-700 transition">
+            <a href="projet.html" <button class="btn">
+                mes projets
+               <a href="competence.html" <button class="btn">
                 Mes Competences
+                
             </a>
         </section>
 
@@ -62,13 +63,13 @@
             <!-- GRILLE DE 3 CARTES -->
             <section class="grid grid-flow-row-dense grid-cols-3 grid-rows-3 ...">
                 
+                
                 <!-- Carte 1 : Bordure bleue en haut + arrondi en bas (rounded-b-lg) -->
                 <article class="carte-univers bg-white p-6 rounded-b-lg border-t-4 border-blue-600 shadow-sm">
                     <h3 class="text-lg font-bold text-slate-900 mb-2">Développement web</h3>
                     <p class="text-slate-600 text-sm border-b-1 border-b-indigo-500 pb-4">Apprendre à créer des sites web avec HTML et CSS.</p>
-                   
-                
-                </article>
+                    
+                   </article>
 
                 <!-- Carte 2 : Bordure violette en haut + arrondi en bas (rounded-b-lg) -->
                 <article class="carte-univers bg-white p-6 rounded-b-lg border-t-4 border-purple-600 shadow-sm">

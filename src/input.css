@@ -1,0 +1,24 @@
+@import url('https://fonts.googleapis.com/css2?family=Playwrite+FR+Moderne:wght@100..400&display=swap');
+@import "tailwindcss";
+
+@theme {
+
+--color-marque: #e11d48;
+--font-titre: "Poppins", sans-serif;
+}
+@utility ombre-nette {
+  box-shadow: 4px 4px 0px #000080;
+}
+/* 1. Style par défaut des balises HTML */
+@layer base {
+  h2 {
+    @apply text-xl font-bold text-gray-800;
+  }
+}
+
+/* 2. Classes de composants réutilisables */
+@layer components {
+  .btn {
+    @apply px-4 py-2 rounded-sm bg-blue-600 text-white font-semibold  border-black px-4 py-2 hover:ombre-nette  bg-blue-700 text-white font-semibold px-6 py-3 rounded-lg hover:bg-blue-700;
+  }
+}
