@@ -6,29 +6,23 @@
     <title>Mon portfolio | Webmaster</title>
     <link rel="stylesheet" href="dist/output.css">
 </head>
-
 <body class="bg-slate-50 text-slate-800 font-sans">
-
-    <!-- HEADER : Flexbox pour aligner le titre à gauche et le menu à droite -->
     <header class="bg-white shadow-sm px-8 py-4 flex flex-col md:flex-row justify-between items-center">
-        <h1 class="font-titre text-marque text-2xl font-bold">Mon site</h1
-        <nav>
+        <p class="font-titre text-marque text-2xl font-bold">Mon site</p>
+        <nav aria-label="Navigation principale">
             <ul class="flex flex-wrap gap-6 mt-3 md:mt-0 text-sm font-medium text-slate-600">
-                <li><a href="index.html" <button class="btn">Accueil</a></li>
-                <li><a href="CV.html" <button class="btn">CV</a></li>
-                <li><a href="projet.html" <button class="btn">Projet</a></li>
-                <li><a href="competence.html" <button class="btn">Mes compétences</a></li>
-                <li><a href="contact.html" <button class="btn">Contact</a></li>
-                <!-- Exemple d'utilisation de rounded-full pour un bouton pilule -->
-                <li><a href="https://www.univ-littoral.fr/" <button class="btn">Ulco</a></li>
+                <li><a href="index.html" class="btn" aria-current="page">Accueil</a></li>
+                <li><a href="CV.html" class="btn">CV</a></li>
+                <li><a href="projet.html" class="btn">Projet</a></li>
+                <li><a href="competence.html" class="btn">Mes compétences</a></li>
+                <li><a href="contact.html" class="btn">Contact</a></li>
+                <li><a href="https://www.univ-littoral.fr/" target="_blank" rel="noopener noreferrer" class="btn">Ulco</a></li>
             </ul>
         </nav>
     </header>
 
     <main class="max-w-5xl mx-auto px-6 py-12">
-
-        <!-- SECTION HERO : Encadré blanc avec bords arrondis (rounded-2xl) -->
-        <section class="hero bg-white p-8 md:p-12 rounded-2xl shadow-sm border border-slate-1000 text-center">
+        <section class="hero bg-white p-8 md:p-12 rounded-2xl shadow-sm border border-slate-200 text-center">
             <p class="surtitre text-xs font-bold tracking-widest text-blue-600 uppercase mb-2">
                 WEB • DESIGN • COMMUNICATION
             </p>
@@ -44,57 +38,45 @@
             <p class="signature italic text-slate-500 text-sm mb-8">
                 Un parcours atypique, une passion pour le numérique et l'envie de créer.
             </p>
-            <!-- BOUTON : rounded-lg pour arrondir les 4 coins -->
-            <a href="projet.html" <button class="btn">
-                mes projets
-               <a href="competence.html" <button class="btn">
-                Mes Competences
-                
-            </a>
+            <div class="flex flex-wrap justify-center gap-4">
+                <a href="projet.html" class="btn">Mes projets</a>
+                <a href="competence.html" class="btn">Mes compétences</a>
+            </div>
         </section>
 
-        <!-- SECTION UNIVERS -->
         <section class="univers mt-16">
             <div class="text-center mb-10">
                 <h2 class="text-2xl font-bold text-slate-900 mb-2">Entre technologie et créativité</h2>
                 <p class="text-slate-600">Trois domaines pour imaginer et concevoir des projets numériques.</p>
             </div>
 
-            <!-- GRILLE DE 3 CARTES -->
-            <section class="grid grid-flow-row-dense grid-cols-3 grid-rows-3 ...">
-                
-                
-                <!-- Carte 1 : Bordure bleue en haut + arrondi en bas (rounded-b-lg) -->
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
                 <article class="carte-univers bg-white p-6 rounded-b-lg border-t-4 border-blue-600 shadow-sm">
                     <h3 class="text-lg font-bold text-slate-900 mb-2">Développement web</h3>
-                    <p class="text-slate-600 text-sm border-b-1 border-b-indigo-500 pb-4">Apprendre à créer des sites web avec HTML et CSS.</p>
-                    
-                   </article>
-
-                <!-- Carte 2 : Bordure violette en haut + arrondi en bas (rounded-b-lg) -->
-                <article class="carte-univers bg-white p-6 rounded-b-lg border-t-4 border-purple-600 shadow-sm">
-                    
-                    <h3 class="text-lg font-bold text-slate-900 mb-2">Design graphique et audiovisuel</h3>
-                    <p class="text-slate-600 text-sm border-b-1 border-b-indigo-500 pb-4">Création graphique, retouche photo et montage vidéo avec les outils Adobe.</p>
-                    
+                    <p class="text-slate-600 text-sm border-b border-indigo-500 pb-4">
+                        Apprendre à créer des sites web avec HTML et CSS.
+                    </p>
                 </article>
 
-                <!-- Carte 3 : Bordure émeraude en haut + arrondi en bas (rounded-b-lg) -->
+                <article class="carte-univers bg-white p-6 rounded-b-lg border-t-4 border-purple-600 shadow-sm">
+                    <h3 class="text-lg font-bold text-slate-900 mb-2">Design graphique et audiovisuel</h3>
+                    <p class="text-slate-600 text-sm border-b border-indigo-500 pb-4">
+                        Création graphique, retouche photo et montage vidéo avec les outils Adobe.
+                    </p>
+                </article>
+
                 <article class="carte-univers bg-white p-6 rounded-b-lg border-t-4 border-emerald-600 shadow-sm">
                     <h3 class="text-lg font-bold text-slate-900 mb-2">Communication numérique</h3>
-                    <p class="text-slate-600 text-sm border-b-1 border-b-indigo-500 pb-4">Création de contenus pour les réseaux sociaux, stratégie digitale et référencement SEO.</p>
-                    
+                    <p class="text-slate-600 text-sm border-b border-indigo-500 pb-4">
+                        Création de contenus pour les réseaux sociaux, stratégie digitale et référencement SEO.
+                    </p>
                 </article>
-
-            </section>
+            </div>
         </section>
-
     </main>
 
-    <!-- FOOTER : Arrondi uniquement en haut (rounded-t-xl) -->
     <footer class="footer bg-slate-900 text-slate-400 text-center py-6 mt-16 rounded-t-xl">
         <p class="text-sm">&copy; 2026 Mon portfolio</p>
     </footer>
-
 </body>
 </html>

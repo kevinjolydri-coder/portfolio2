@@ -1,95 +1,75 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="fr">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Mes projets | Portfolio</title>
-    <link rel="stylesheet" href="css/style.css" />
-  </head>
-
-  <body>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mes projets | Mon portfolio</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
     <header>
-      <h1>Mes projets</h1>
-      <nav>
-        <ul>
-          <li><a href="index.html"> Accueil</a></li>
-          <li><a href="CV.html"> CV</a></li>
-          <li><a href="projet.html"> Projet</a></li>
-          <li><a href="competence.html"> mes compétences</a></li>
-          <li><a href="https://www.univ-littoral.fr/"> Ulco</a></li>
-        </ul>
-      </nav>
+        <p class="logo">Mon portfolio</p>
+        <nav aria-label="Navigation principale">
+            <ul>
+                <li><a href="index.html">Accueil</a></li>
+                <li><a href="CV.html">CV</a></li>
+                <li><a href="projet.html" aria-current="page">Projet</a></li>
+                <li><a href="competence.html">Mes compétences</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="https://www.univ-littoral.fr/" target="_blank" rel="noopener noreferrer">Ulco</a></li>
+            </ul>
+        </nav>
     </header>
 
     <main>
-      <section class="projets-intro">
-        <h2>Mes projets</h2>
+        <section class="projets-intro">
+            <h1>Mes projets</h1>
+            <p>
+                Découvrez mes réalisations en création web, design graphique et
+                communication numérique.
+            </p>
+        </section>
 
-        <p>
-          Découvrez mes réalisations en création web, design graphique et
-          communication numérique.
-        </p>
-      </section>
+        <section class="liste-projets">
+            <h2 class="titre-realisations">Mes réalisations</h2>
 
-      <section class="liste-projets">
-        <h2 class="titre-realisations">Mes réalisations</h2>
+            <article class="carte-projet">
+                <figure>
+                    <img src="images/portfolio.png" alt="Capture d'écran de mon portfolio web">
+                    <figcaption>Aperçu de mon portfolio personnel.</figcaption>
+                </figure>
+                <h3>Mon portfolio web</h3>
+                <p>Création de mon site personnel.</p>
+            </article>
 
-        <!-- PROJET 1 : PORTFOLIO WEB -->
-        <article class="carte-projet">
-          <figure>
-            <img
-              src="images/portfolio.png"
-              alt="Capture d'écran de mon portfolio web"
-            />
+            <article class="carte-projet">
+                <h3>Identité visuelle — Web Diffusion</h3>
+                <p>Création d'une identité visuelle numérique.</p>
+            </article>
 
-            <figcaption>Aperçu de mon portfolio personnel.</figcaption>
-          </figure>
-
-          <h3>Mon portfolio web</h3>
-
-          <p>Création de mon site personnel.</p>
-        </article>
-
-        <!-- PROJET 2 : WEB DIFFUSION -->
-        <article class="carte-projet">
-          <h3>Identité visuelle — Web Diffusion</h3>
-
-          <p>Création d'une identité visuelle numérique.</p>
-        </article>
-
-        <!-- PROJET 3 : INDESIGN -->
-        <article class="carte-projet">
-          <figure>
-            <img
-              src="images/vignette_indesign_page1.jpg"
-              alt="Première page d'un support graphique réalisé avec InDesign"
-            />
-
-            <figcaption>
-              Aperçu de mon support de communication réalisé avec Adobe
-              InDesign.
-            </figcaption>
-          </figure>
-
-          <h3>Création graphique — Serrurerie & Services</h3>
-
-          <p>
-            Réalisation d'un support de communication de deux pages avec Adobe
-            InDesign. Travail sur la mise en page, la typographie et la
-            hiérarchie visuelle.
-          </p>
-
-          <a
-            href="css/documents/projet-indesign-serrurerie.pdf.pdf"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Voir le projet PDF
-          </a>
-        </article>
-      </section>
+            <article class="carte-projet">
+                <figure>
+                    <img src="images/vignette_indesign_page1.jpg" alt="Première page d'un support graphique réalisé avec InDesign">
+                    <figcaption>
+                        Aperçu de mon support de communication réalisé avec Adobe
+                        InDesign.
+                    </figcaption>
+                </figure>
+                <h3>Création graphique — Serrurerie &amp; Services</h3>
+                <p>
+                    Réalisation d'un support de communication de deux pages avec Adobe
+                    InDesign. Travail sur la mise en page, la typographie et la
+                    hiérarchie visuelle.
+                </p>
+                <a href="documents/projet-indesign-serrurerie.pdf" target="_blank" rel="noopener noreferrer">
+                    Voir le projet PDF
+                </a>
+            </article>
+        </section>
     </main>
 
-    <footer></footer>
-  </body>
+    <footer class="footer">
+        <p>&copy; 2026 Mon portfolio</p>
+    </footer>
+</body>
 </html>

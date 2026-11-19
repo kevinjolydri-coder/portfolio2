@@ -1,33 +1,34 @@
 <!DOCTYPE html>
 <html lang="fr">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact | Kevin Joly</title>
+    <title>Contact - Kevin Joly | Mon portfolio</title>
     <link rel="stylesheet" href="css/style.css">
 </head>
-
 <body>
     <header>
-        <h1>Me contacter</h1>
-     <nav>
+        <p class="logo">Mon portfolio</p>
+        <nav aria-label="Navigation principale">
             <ul>
                 <li><a href="index.html">Accueil</a></li>
                 <li><a href="CV.html">CV</a></li>
                 <li><a href="projet.html">Projet</a></li>
                 <li><a href="competence.html">Mes compétences</a></li>
-                <li><a href="contact.html">Contact</a></li>
-                <li><a href="https://www.univ-littoral.fr/" target="_blank">Ulco</a></li>
+                <li><a href="contact.html" aria-current="page">Contact</a></li>
+                <li><a href="https://www.univ-littoral.fr/" target="_blank" rel="noopener noreferrer">Ulco</a></li>
             </ul>
         </nav>
     </header>
 
     <main>
-        <!-- BLOC 1 : Tes coordonnées directes -->
+        <section class="contact-intro">
+            <h1>Me contacter</h1>
+            <p>N'hésitez pas à me contacter pour toute proposition de stage, d'alternance ou de projet numérique.</p>
+        </section>
+
         <section id="coordonnees">
             <h2>Mes coordonnées</h2>
-            <p>N'hésitez pas à me contacter pour toute proposition de stage, d'alternance ou de projet numérique :</p>
             <ul>
                 <li><strong>Localisation :</strong> Calais (62100)</li>
                 <li><strong>Téléphone :</strong> <a href="tel:+33783411563" class="lien-contact">07.83.41.15.63</a></li>
@@ -35,7 +36,7 @@
                 <li><strong>LinkedIn :</strong> Joly Kevin</li>
             </ul>
         </section>
-        <!-- BLOC 2 : Formulaire de contact -->
+
         <section id="formulaire-contact">
             <h2>Envoyer un message</h2>
             <form action="mailto:kevinjoly.dri@gmail.com" method="post" enctype="text/plain" class="form-contact">
@@ -64,9 +65,8 @@
         </section>
     </main>
 
-   <footer>
+    <footer class="footer">
         <p>&copy; 2026 - Kevin Joly | Calais (62100)</p>
     </footer>
 </body>
-
 </html>
