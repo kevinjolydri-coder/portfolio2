@@ -1,7 +1,9 @@
 /* ==============================
    1. BASE GÉNÉRALE
    ============================== */
-
+html {
+  scrollbar-gutter: stable;
+}
 * {
   margin: 0;
   padding: 0;
