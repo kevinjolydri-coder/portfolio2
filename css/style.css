@@ -386,3 +386,319 @@ footer {
     grid-template-columns: 1fr;
   }
 }
+/* =========================================================
+   CARROUSEL EN ÉVENTAIL & LIGHTBOX (SÉMANTIQUE HTML5 / CSS3)
+   ========================================================= */
+.section-carrousel {
+  position: relative;
+  width: 100%;
+  min-height: 620px;
+  background-color: #ffffff;
+  border: 1px solid #e5e7eb;
+  border-radius: 16px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  padding: 40px 60px;
+  margin: 24px 0;
+  box-sizing: border-box;
+}
+
+.section-carrousel * {
+  box-sizing: border-box;
+}
+
+/* Zone des cartes à gauche */
+.section-carrousel .eventail-projets {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 55%;
+  height: 100%;
+}
+
+/* Style commun des cartes */
+.section-carrousel .carte-projet {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 290px;
+  height: 185px;
+  margin-top: -92.5px;
+  border-radius: 14px;
+  overflow: hidden;
+  background: #f3f4f6;
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.14);
+  border: 2px solid #ffffff;
+  text-decoration: none;
+  transition: transform 0.35s ease, box-shadow 0.35s ease, z-index 0s;
+}
+
+.section-carrousel .carte-projet img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.section-carrousel .badge-carte {
+  position: absolute;
+  bottom: 10px;
+  left: 12px;
+  background: rgba(17, 24, 39, 0.78);
+  color: #ffffff;
+  font-size: 0.75rem;
+  font-weight: 600;
+  padding: 4px 10px;
+  border-radius: 999px;
+  opacity: 0;
+  transition: opacity 0.25s ease;
+}
+
+/* Disposition en arc de cercle sur le bord gauche */
+.section-carrousel .carte-projet:nth-child(1) {
+  transform: translate(-35px, -210px) rotate(-32deg);
+  z-index: 1;
+}
+
+.section-carrousel .carte-projet:nth-child(2) {
+  transform: translate(15px, -110px) rotate(-16deg);
+  z-index: 2;
+}
+
+.section-carrousel .carte-projet:nth-child(3) {
+  transform: translate(35px, 0px) rotate(0deg);
+  z-index: 5;
+  box-shadow: 0 18px 36px rgba(0, 0, 0, 0.22);
+}
+
+.section-carrousel .carte-projet:nth-child(4) {
+  transform: translate(15px, 110px) rotate(16deg);
+  z-index: 2;
+}
+
+.section-carrousel .carte-projet:nth-child(5) {
+  transform: translate(-35px, 210px) rotate(32deg);
+  z-index: 1;
+}
+
+/* Mise en avant au survol de la souris */
+.section-carrousel .carte-projet:hover,
+.section-carrousel .carte-projet:focus {
+  z-index: 20;
+  box-shadow: 0 24px 48px rgba(0, 0, 0, 0.28);
+}
+
+.section-carrousel .carte-projet:nth-child(1):hover { transform: translate(45px, -190px) rotate(-6deg) scale(1.06); }
+.section-carrousel .carte-projet:nth-child(2):hover { transform: translate(65px, -100px) rotate(-3deg) scale(1.06); }
+.section-carrousel .carte-projet:nth-child(3):hover { transform: translate(75px, 0px) rotate(0deg) scale(1.08); }
+.section-carrousel .carte-projet:nth-child(4):hover { transform: translate(65px, 100px) rotate(3deg) scale(1.06); }
+.section-carrousel .carte-projet:nth-child(5):hover { transform: translate(45px, 190px) rotate(6deg) scale(1.06); }
+
+.section-carrousel .carte-projet:hover .badge-carte {
+  opacity: 1;
+}
+
+/* Colonne de texte et liste à droite */
+.section-carrousel .infos-projets {
+  position: relative;
+  z-index: 10;
+  width: 45%;
+  max-width: 420px;
+}
+
+.section-carrousel .surtitre {
+  display: inline-block;
+  font-size: 0.78rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: #6b7280;
+  margin-bottom: 6px;
+}
+
+.section-carrousel .infos-projets h2 {
+  margin: 0 0 10px 0;
+  font-size: 1.8rem;
+}
+
+.section-carrousel .infos-projets p {
+  margin: 0 0 20px 0;
+  color: #4b5563;
+  line-height: 1.5;
+  font-size: 0.95rem;
+}
+
+.section-carrousel .index-projets {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  border-top: 1px solid #e5e7eb;
+}
+
+.section-carrousel .index-projets li a {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 11px 6px;
+  border-bottom: 1px solid #e5e7eb;
+  text-decoration: none;
+  color: #111827;
+  font-weight: 500;
+  transition: padding-left 0.2s ease, color 0.2s ease;
+}
+
+.section-carrousel .index-projets li a span {
+  font-size: 0.8rem;
+  color: #9ca3af;
+  font-weight: 700;
+}
+
+.section-carrousel .index-projets li a:hover {
+  padding-left: 14px;
+  color: #2563eb;
+}
+
+/* Bouton agrandir en bas à droite */
+.section-carrousel .bouton-agrandir {
+  position: absolute;
+  bottom: 22px;
+  right: 22px;
+  z-index: 15;
+  width: 44px;
+  height: 44px;
+  border-radius: 12px;
+  background: #f3f4f6;
+  color: #111827;
+  border: 1px solid #e5e7eb;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  transition: background 0.2s ease, transform 0.2s ease;
+}
+
+.section-carrousel .bouton-agrandir:hover {
+  background: #e5e7eb;
+  transform: scale(1.06);
+}
+
+/* =========================================================
+   FENÊTRE PLEIN ÉCRAN (LIGHTBOX PURE CSS VIA :TARGET)
+   ========================================================= */
+.fenetre-zoom {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+}
+
+.fenetre-zoom:target {
+  display: flex;
+}
+
+.fenetre-zoom .fond-sombre {
+  position: absolute;
+  inset: 0;
+  background: rgba(15, 23, 42, 0.85);
+}
+
+.fenetre-zoom .contenu-zoom {
+  position: relative;
+  z-index: 2;
+  max-width: 780px;
+  width: 100%;
+  margin: 0; /* Annule la marge par défaut de <figure> */
+  background: #ffffff;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 25px 50px rgba(0, 0, 0, 0.45);
+}
+
+.fenetre-zoom .contenu-zoom img {
+  width: 100%;
+  max-height: 65vh;
+  object-fit: cover;
+  display: block;
+}
+
+.fenetre-zoom .bouton-fermer {
+  position: absolute;
+  top: 14px;
+  right: 14px;
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  background: rgba(17, 24, 39, 0.8);
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 1.5rem;
+  line-height: 38px;
+  text-align: center;
+}
+
+.fenetre-zoom .legende-zoom {
+  padding: 20px 24px;
+}
+
+.fenetre-zoom .legende-zoom h3 {
+  margin: 0 0 6px 0;
+}
+
+.fenetre-zoom .legende-zoom p {
+  margin: 0 0 14px 0;
+  color: #4b5563;
+}
+
+.fenetre-zoom .navigation-zoom {
+  display: flex;
+  justify-content: space-between;
+  border-top: 1px solid #e5e7eb;
+  padding: 12px 0 0 0;
+  margin: 0;
+  background: transparent; /* Évite d'hériter du fond du <footer> principal */
+  color: inherit;
+}
+
+.fenetre-zoom .navigation-zoom a {
+  text-decoration: none;
+  color: #2563eb;
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+
+/* Adaptation mobile / petit écran */
+@media (max-width: 820px) {
+  .section-carrousel {
+    flex-direction: column;
+    padding: 24px;
+  }
+  .section-carrousel .eventail-projets {
+    position: relative;
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    margin-bottom: 24px;
+  }
+  .section-carrousel .carte-projet,
+  .section-carrousel .carte-projet:nth-child(n) {
+    position: relative;
+    top: auto;
+    left: auto;
+    margin-top: 0;
+    width: 100%;
+    transform: none;
+  }
+  .section-carrousel .carte-projet:nth-child(n):hover {
+    transform: scale(1.02);
+  }
+  .section-carrousel .infos-projets {
+    width: 100%;
+    max-width: 100%;
+  }
+}
